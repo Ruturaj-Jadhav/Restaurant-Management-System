@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Restaurant</title>
+  </head>
+  <body>
+    <center><h1>Restaurant</h1></center>
+    <center><h2>Add menu items</h2></center>
+
+    <form class="add" action="menu" method="post">
+      <input type="text" name="fooditem" placeholder="Add item..." autocomplete="off">
+      <div class="input-buttons">
+        <button type="submit" class="fas fa-plus add plus-icon"name="button"></button>
+      </div>
+    </form>
+<ul>
+  <li>Panner Butter Masala</li>
+  <li>Malai Kofta</li>
+  <li>Biryani</li>
+</ul>
+
+<ul>
+  <% for (var i = 0; i < menu.length; i++) { %>
+    <li><%= menu[i].dish %></li>
+  <% } %>
+</ul>
+
+
+
+
+
+
+  </body>
+</html>
