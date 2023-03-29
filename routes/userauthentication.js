@@ -97,7 +97,7 @@ router.post('/menu' , async (req,res)=>{
  await Usermodel.findOneAndUpdate({username : username} , {
     $push : {
       menu : {
-        dish : item ,
+        dish : item.toUpperCase() ,
         price : price
       }
     }
