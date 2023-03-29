@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const fs = require('fs')
+const qs = require('qs')
+const axios = require('axios'); 
+
+var arr = [];
 const indexWebroutes = require('./routes/index')
 const userAuthroutes = require("./routes/userauthentication")
 
@@ -19,6 +23,12 @@ app.set('view engine', 'ejs')
 
 app.use("/" , userAuthroutes);
 app.use("/user",indexWebroutes);
+app.post('/cart', (req,res)=>{
+   
+    
+    arr.push(req.body.item);
+    console.log(arr);
+})
 
 
 
