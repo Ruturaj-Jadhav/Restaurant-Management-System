@@ -24,8 +24,6 @@ app.set('view engine', 'ejs')
 app.use("/" , userAuthroutes);
 app.use("/user",indexWebroutes);
 app.post('/cart', (req,res)=>{
-   
-    
     arr.push(req.body.item);
     console.log(arr);
 })
@@ -34,4 +32,6 @@ app.post('/cart', (req,res)=>{
 
 app.listen(3000 , ()=>{
     console.log("Server Started");
+
+
 })
