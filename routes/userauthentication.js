@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const fs = require('fs')
+const localStorage = require('local-storage')
 var username;
 var router = express.Router();
 
@@ -69,10 +70,14 @@ router.post('/login' , async (req , res)=>{
        id : user._id ,
        username : user.username
     },
-    JWT_SECRET
+    JWT_SECRET,
+
+    {expiresIn : '2h'}
     )
 
-  console.log(data)
+    console.log(token);
+
+    localStorage.set('jwt', token);
 
    res.render("restaurantview" )
 
