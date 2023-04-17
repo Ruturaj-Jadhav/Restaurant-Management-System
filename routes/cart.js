@@ -7,7 +7,6 @@ const fs = require('fs')
 var username;
 var router = express.Router();
 
-
 router.post('/add-cart' , async (req,res)=>{
     var dishes = [];
     var totalPrice = 0;
