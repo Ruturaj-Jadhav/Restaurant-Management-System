@@ -26,7 +26,7 @@ app.set('view engine', 'ejs')
 
 
 
-app.use("/" , userAuthroutes);
+app.use("/" , userAuthroutes); // user auth routes
 app.use("/user",indexWebroutes);
 app.post('/cart', cartRoutes);
 
