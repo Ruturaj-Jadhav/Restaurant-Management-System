@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const localStorage = require('local-storage');
 
-const JWT_SECRET = "JNJSNJXJSODJ67CDCWKLCWOPI@#$%88723"
+const JWT_SECRET = process.env.JWT_SECRET
 
 var router = express.Router();
 

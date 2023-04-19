@@ -1,3 +1,6 @@
+if(process.env.NODE_ENV !== 'production'){
+	require('dotenv').config();
+}
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -14,7 +17,7 @@ const cartRoutes = require("./routes/cart")
 
 
 const app = express();
-const mongoDB = "mongodb://127.0.0.1:27017/user-auth?directConnection=true";
+const mongoDB = process.env.DATABASE_URL;;
 mongoose.connect(mongoDB);
 app.use(bodyParser.urlencoded({extended : true}))
 app.use(express.static("public"));

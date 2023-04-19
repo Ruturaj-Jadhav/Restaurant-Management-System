@@ -8,7 +8,8 @@ const localStorage = require('local-storage')
 var username;
 var router = express.Router();
 
-const JWT_SECRET = "JNJSNJXJSODJ67CDCWKLCWOPI@#$%88723"
+const JWT_SECRET = process.env.JWT_SECRET
+
 const Usermodel = require('../models/user.model');
 
 router.get('/' , (req , res)=>{
@@ -71,7 +72,6 @@ router.post('/login' , async (req , res)=>{
        username : user.username
     },
     JWT_SECRET,
-
     {expiresIn : '2h'}
     )
 
