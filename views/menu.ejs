@@ -40,7 +40,7 @@
                     <img src="/Images/Remove from cart.png" alt="Remove from cart">
                 </div>
             </div>
-            <button class="btn one3" onclick="myFunction('<%=dish.dish%>')">Add to Cart</button>
+            <button class="btn one3" onclick="myFunction('<%=dish.price%>')">Pay Now</button>
 
 
         </div>
@@ -48,14 +48,13 @@
     </div>
     <script>
         
-        function myFunction(dish) {
+        function myFunction(amount) {
             const param = new URLSearchParams({
-                'item': dish,
-                'price': "You can't afford"
+                amount : amount
             });
             axios({
                 method: 'post',
-                url: '/cart',
+                url: '/orders',
                 data: param.toString()
             })
 

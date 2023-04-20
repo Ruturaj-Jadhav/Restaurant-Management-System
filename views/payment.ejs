@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrderMe</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/menu.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+    
+            <center><button class="btn one3" onclick="handlePayment(500)">Pay Now</button></center>
+
+
+      
+    <script>
+        
+        function handlePayment(amount) {
+            const param = new URLSearchParams({
+                amount : amount,
+
+            });
+            axios({
+                method: 'post',
+                url: '/payment/orders',
+                data: param.toString()
+            })
+
+        }
+
+      
+    </script>
+</body>
+
+</html>
