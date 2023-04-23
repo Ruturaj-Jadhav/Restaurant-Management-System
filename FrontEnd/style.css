@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* color: #569daa; */
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.heading {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: "Rajdhani";
+}
+
+.img-box {
+  height: 40px;
+}
+
+nav {
+  box-shadow: 2px 2px 2px 1px rgba(1, 1, 1, 0.4);
+}
+
+.navbar-nav {
+  padding-right: 20px;
+}
+.navigation {
+  background-color: #569daa;
+  padding: 15px 10px 2px;
+  display: flex;
+}
+
+.lists {
+  margin: 5px;
+}
+
+/* Below Navbar */
+
+.button_holder {
+  margin-top: 100px;
+  padding: 40px;
+}
+
+.button_three {
+  padding: 50px;
+}
